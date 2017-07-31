@@ -17,6 +17,7 @@ const config = require('./webpack.config.dev');
 const routes = require('./server/routes/index');
 const helpers = require('./server/helpers');
 const errorHandlers = require('./server/handlers/errorHandlers');
+
 require('./server/handlers/passport');
 
 // create our Express app
