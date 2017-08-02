@@ -4,7 +4,7 @@ import SelectInput from '../common/SelectInput';
 
 const CourseForm = ({course, allAuthors, onSave, onChange, saving, errors}) =>{
   return (
-    <form action="">
+    <form action="/api/courses">
       <h1>Manage Course</h1>
       <TextInput
         name="title"

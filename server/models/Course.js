@@ -30,6 +30,7 @@ courseSchema.pre('save', async function(next){
 
     if(storesWithSlug.length){
         this.slug = `${this.slug}-${storesWithSlug.length + 1}`;
+        this.watchHref = `http://www.pluralsight.com/courses/${this.slug}`;
     }
 
     next();

@@ -16,7 +16,7 @@ const CourseList = ({courses}) => {
           </thead>
           <tbody>
             {courses.map(course =>
-              <CourseListRow key={course.id} course={course}/>
+              <CourseListRow key={course._id} course={course}/>
             )}
           </tbody>
       </table>

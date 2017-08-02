@@ -7,12 +7,16 @@ class CourseApi {
         return axios
             .get(`/api/courses`)
             .then(res => {
-                //const [...coures] = res;
-                return res;
+               return res.data;
             })
             .catch(() => {
                 return author;
             });
+    }
+    
+    saveCourse(){
+        return axios
+            .post(`/api/coures`)
     }
 }
 

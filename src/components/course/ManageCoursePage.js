@@ -33,6 +33,7 @@ export class ManageCoursePage extends React.Component{
     course[field] = event.target.value;
     return this.setState({course:course});
   }
+  
   courseFormIsvalid(){
     let formIsvalid = true;
     let errors = {};
