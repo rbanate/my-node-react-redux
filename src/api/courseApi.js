@@ -16,7 +16,10 @@ class CourseApi {
     
     saveCourse(){
         return axios
-            .post(`/api/coures`)
+            .post(`/api/courses`)
+            .then(res => {
+                return res.data;
+            });
     }
 }
 

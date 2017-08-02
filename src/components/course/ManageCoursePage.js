@@ -33,7 +33,7 @@ export class ManageCoursePage extends React.Component{
     course[field] = event.target.value;
     return this.setState({course:course});
   }
-  
+
   courseFormIsvalid(){
     let formIsvalid = true;
     let errors = {};
@@ -72,7 +72,9 @@ export class ManageCoursePage extends React.Component{
   }
 
   render(){
+   
     return(
+      
       <div>
         <CourseForm
           allAuthors={this.props.authors}
@@ -99,7 +101,7 @@ ManageCoursePage.contextTypes = {
 };
 
 function getCourseById(courses, id) {
-  const course = courses.filter(course => course.id === id);
+  const course = courses.filter(course => course.slug === id);
 
   if(course.length) return course [0]; // since filter returns an array, have to grab the first one
   return null;
