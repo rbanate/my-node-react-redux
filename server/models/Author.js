@@ -10,8 +10,16 @@ const authorSchema = new Schema({
       },
     lastName: {
       type: String,
-      required: 'Please provide First name'
+      required: 'Please provide Last name'
       }
 });
+
+// function autoPopulate(next){
+//     this.populate('course');
+//     next();
+// }
+
+// authorSchema.pre('find', autoPopulate);
+// reviewSchema.pre('findOne', autoPopulate);
 
 module.exports = mongoose.model('Author', authorSchema);
